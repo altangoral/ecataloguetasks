@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mertkopoli Plastik — 2026/2027 Lüks Ambalaj Koleksiyonu</title>
+  
+  <!-- Tipografi / Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       TEMEL DEĞİŞKENLER VE RENK PALETİ (STUDIO BACKGROUND MATCHED)
+       ========================================================================== */
+    :root {
+      --bg-canvas: #A5A7AC;
+      --studio-bg: #CBCCD2;
+      --studio-gradient: linear-gradient(180deg, #B5B7BC 0%, #CBCCD2 48%, #DFE0E5 100%);
+      --studio-radial: radial-gradient(ellipse at 50% 38%, #FFFFFF 0%, #CBCCD2 58%, #B5B7BC 100%);
+      
+      --gold-primary: #C5A059;
+      --gold-metallic: linear-gradient(135deg, #DFBD69 0%, #926F34 100%);
+      --gold-dark: #8C6A28;
+      
+      --brand-navy: #0A0F1D;
+      --brand-surface: #12192B;
+      --text-dark: #0A0F1D;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+      
+      --emerald-soft: #059669;
+      --emerald-bg: rgba(5, 150, 105, 0.12);
+      
+      --border-subtle: rgba(255, 255, 255, 0.45);
+      --border-dark: rgba(10, 15, 29, 0.12);
+      --shadow-sheet: 0 25px 50px -12px rgba(10, 15, 29, 0.35);
+      --shadow-packshot: 0 16px 26px rgba(10, 15, 29, 0.16);
+    }
+
+    /* ==========================================================================
+       GENEL SIFIRLAMA VE YAZDIRMA (PRINT / A4) DÜZENİ
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg-canvas);
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-canvas);
+      line-height: 1.4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0 80px 0;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .interactive-catalog-header,
+      .inspect-cue-badge,
+      .tech-lightbox-overlay {
+        display: none !important;
+      }
+      .a4-catalog-page {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    /* ==========================================================================
+       İNTERAKTİF ÜST YÖNETİM ÇUBUĞU (KULLANICI KONTROLLERİ)
+       ========================================================================== */
+    .interactive-catalog-header {
+      width: 210mm;
+      max-width: 95vw;
+      background: #0A0F1D;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: sticky;
+      top: 14px;
+      z-index: 1000;
+    }
+
+    .brand-id-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-crest {
+      width: 32px;
+      height: 32px;
+      background: var(--gold-metallic);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: #0A0F1D;
+      font-size: 15px;
+      box-shadow: 0 2px 8px rgba(223, 189, 105, 0.4);
+    }
+
+    .brand-name-group h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 12pt;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      line-height: 1.1;
+    }
+
+    .brand-name-group p {
+      font-size: 7pt;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .header-quick-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-nav-pill {
+      font-size: 7.5pt;
+      color: #E2E8F0;
+      text-decoration: none;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s;
+    }
+
+    .page-nav-pill:hover {
+      background: var(--gold-primary);
+      color: #0A0F1D;
+      font-weight: 600;
+    }
+
+    .mode-toggle-btn {
+      background: #1E293B;
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      font-size: 7.5pt;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .mode-toggle-btn:hover {
+      background: var(--gold-primary);
+      color: #0A0F1D;
+    }
+
+    .print-pdf-btn {
+      background: var(--gold-metallic);
+      border: none;
+      color: #0A0F1D;
+      font-weight: 700;
+      font-size: 7.5pt;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(223, 189, 105, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .print-pdf-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(223, 189, 105, 0.5);
+    }
+
+    /* ==========================================================================
+       A4 SAYFA YAPISI VE HOMOJEN STÜDYO GRADIENTI
+       ========================================================================== */
+    .a4-catalog-page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      background-color: var(--studio-bg);
+      background-image: var(--studio-gradient);
+      box-shadow: var(--shadow-sheet);
+      border-radius: 3px;
+      position: relative;
+      padding: 11mm 14mm 10mm 22mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      page-break-after: always;
+      box-sizing: border-box;
+      margin-bottom: 28px;
+    }
+
+    /* Sol Kenar Dikey Marka Şeridi */
+    .page-left-spine {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 10mm;
+      background: #0A0F1D;
+      border-right: 1.5px solid var(--gold-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18mm 0;
+      z-index: 5;
+    }
+
+    .spine-emblem-icon {
+      width: 18px;
+      height: 18px;
+      background: var(--gold-metallic);
+      mask: radial-gradient(circle, #000 65%, transparent 70%);
+      -webkit-mask: radial-gradient(circle, #000 65%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .spine-text-vertical {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      letter-spacing: 4px;
+      color: #CBD5E1;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .spine-text-vertical span {
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .spine-page-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--gold-primary);
+    }
+
+    /* Sayfa Başlık Bloğu */
+    .page-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid rgba(10, 15, 29, 0.18);
+      margin-bottom: 8px;
+    }
+
+    .page-header-title-box .series-pre-title {
+      font-family: 'Cinzel', serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .page-header-title-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19pt;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.1;
+      letter-spacing: -0.2px;
+    }
+
+    .page-header-meta-box {
+      text-align: right;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 7pt;
+      color: #475569;
+    }
+
+    .page-header-meta-box .catalog-ref-no {
+      font-weight: 700;
+      color: #0A0F1D;
+    }
+
+    /* Sayfa Alt Bilgi (Footer) */
+    .page-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 6px;
+      border-top: 1px solid rgba(10, 15, 29, 0.14);
+      font-size: 7pt;
+      color: #64748B;
+      margin-top: 4px;
+    }
+
+    .footer-company-legal {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: #0A0F1D;
+    }
+
+    .footer-page-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: #0A0F1D;
+    }
+
+    /* ==========================================================================
+       GESTALT 2x2 EŞİT ALANLI VE SIFIR HİYERARŞİLİ ÜRÜN IZGARASI
+       ========================================================================== */
+    .equal-product-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 8px 12px;
+      flex: 1;
+      margin-bottom: 4px;
+    }
+
+    .equal-product-card {
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 5px 7px 7px 7px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+      width: 100%;
+      height: 100%;
+    }
+
+    .equal-product-card:hover {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 12px 28px -6px rgba(10, 15, 29, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .card-top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+      z-index: 2;
+    }
+
+    .product-code-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: var(--text-dark);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .header-right-badges {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .softtouch-top-pill {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: #047857;
+      background: #D1FAE5;
+      border: 1px solid #A7F3D0;
+      padding: 2px 6px;
+      border-radius: 10px;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .softtouch-top-pill::before {
+      content: '✓';
+      font-weight: 800;
+      font-size: 6.8pt;
+    }
+
+    .product-vol-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #DFBD69;
+      background: #0A0F1D;
+      border: 1px solid rgba(223, 189, 105, 0.4);
+      padding: 2px 7px;
+      border-radius: 12px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 5px rgba(10, 15, 29, 0.15);
+    }
+
+    /* ÇERÇEVESİZ DEVASA PACKSHOT (255px) */
+    .packshot-uniform-frame {
+      width: 100%;
+      height: 255px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 4px;
+      overflow: hidden;
+    }
+
+    .packshot-uniform-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      mask-image: radial-gradient(ellipse 96% 92% at 50% 50%, black 72%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 96% 92% at 50% 50%, black 72%, transparent 100%);
+      filter: drop-shadow(0 14px 22px rgba(10, 15, 29, 0.14));
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .equal-product-card:hover .packshot-uniform-frame img {
+      transform: scale(1.035);
+      filter: drop-shadow(0 20px 30px rgba(10, 15, 29, 0.22));
+    }
+
+    .packshot-uniform-frame .img-orig-mode {
+      display: none;
+    }
+
+    body.view-physical-active .packshot-uniform-frame .img-ai-mode {
+      display: none;
+    }
+    body.view-physical-active .packshot-uniform-frame .img-orig-mode {
+      display: block;
+    }
+
+    .inspect-cue-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(10, 15, 29, 0.75);
+      color: #FFFFFF;
+      font-size: 6.5pt;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .equal-product-card:hover .inspect-cue-badge {
+      opacity: 1;
+    }
+
+    /* Ürün Metinleri */
+    .card-title-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      line-height: 1.15;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-description-text {
+      font-size: 6.2pt;
+      color: #475569;
+      line-height: 1.3;
+      margin-bottom: 4px;
+      height: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 5 Satırlı Kompakt Teknik Tablo */
+    .card-specs-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 6.5pt;
+      margin-top: auto;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+    }
+
+    .card-specs-matrix tr {
+      border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    }
+
+    .card-specs-matrix tr:last-child {
+      border-bottom: none;
+    }
+
+    .card-specs-matrix td {
+      padding: 1.8px 7px;
+    }
+
+    .card-specs-matrix td.label-col {
+      color: #475569;
+      font-weight: 600;
+      width: 46%;
+      white-space: nowrap;
+    }
+
+    .card-specs-matrix td.value-col {
+      font-weight: 700;
+      color: #0A0F1D;
+      text-align: right;
+    }
+
+    .card-specs-matrix td.moq-accent {
+      color: #B45309;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .card-specs-matrix td.kartela-val {
+      color: #1D4ED8;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+    }
+
+    .card-specs-matrix td.softtouch-accent {
+      color: #047857;
+      font-weight: 700;
+    }
+
+    .card-specs-matrix td.surface-standard {
+      color: #475569;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       KAPAK SAYFASI (PAGE 00: LUXURY ARCHITECTURAL COVER)
+       ========================================================================== */
+    .catalog-cover-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18mm 20mm 16mm 28mm !important;
+      position: relative;
+    }
+
+    .cover-top-brand-band {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid var(--gold-primary);
+      padding-bottom: 12px;
+    }
+
+    .cover-brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #0A0F1D;
+    }
+
+    .cover-year-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      background: var(--gold-metallic);
+      padding: 3px 12px;
+      border-radius: 4px;
+      letter-spacing: 1.5px;
+    }
+
+    .cover-hero-centerpiece {
+      text-align: center;
+      padding: 12mm 0;
+    }
+
+    .cover-collection-label {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .cover-main-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+    }
+
+    .cover-manifesto-para {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9pt;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #334155;
+      max-width: 540px;
+      margin: 0 auto 24px auto;
+    }
+
+    .cover-hero-visual-cluster {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 8px 0;
+    }
+
+    .cover-hero-visual-cluster img {
+      max-height: 290px;
+      max-width: 85%;
+      object-fit: contain;
+      filter: drop-shadow(0 25px 35px rgba(10, 15, 29, 0.3));
+    }
+
+    .cover-metrics-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+      border-top: 1px solid rgba(10, 15, 29, 0.12);
+      padding-top: 16px;
+    }
+
+    .metric-cell {
+      text-align: center;
+    }
+
+    .metric-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      line-height: 1.1;
+    }
+
+    .metric-lbl {
+      font-size: 7.5pt;
+      color: #475569;
+      margin-top: 3px;
+    }
+
+    .cover-footer-contacts {
+      border-top: 1.5px solid var(--gold-primary);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.5pt;
+      color: #334155;
+    }
+
+    .cover-footer-contacts a {
+      color: #0A0F1D;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cover-footer-contacts a:hover {
+      color: var(--gold-dark);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       SAYFA 06: ENDÜSTRİYEL ŞARTNAME VE SİPARİŞ MATRİSİ
+       ========================================================================== */
+    .specs-table-full {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7pt;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(10, 15, 29, 0.15);
+      margin-bottom: 12px;
+    }
+
+    .specs-table-full th {
+      background: #0A0F1D;
+      color: var(--gold-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .specs-table-full td {
+      padding: 6px 10px;
+      border-bottom: 1px solid rgba(10, 15, 29, 0.08);
+      color: #1E293B;
+    }
+
+    .specs-table-full tr:last-child td {
+      border-bottom: none;
+    }
+
+    .specs-table-full tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .specs-badge-moq {
+      font-weight: 800;
+      color: #B45309;
+      background: #FEF3C7;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .specs-badge-softtouch {
+      font-weight: 700;
+      color: #047857;
+      background: #D1FAE5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .specs-badge-kartela {
+      font-weight: 700;
+      color: #1D4ED8;
+      background: #DBEAFE;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .packaging-protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .protocol-card {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+
+    .protocol-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .protocol-card p {
+      font-size: 6.8pt;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    .specs-footer-callout {
+      background: #0A0F1D;
+      color: #FFFFFF;
+      padding: 14px 18px;
+      border-radius: 8px;
+      border: 1px solid var(--gold-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .specs-footer-callout h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 10pt;
+      letter-spacing: 1.5px;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .specs-footer-callout p {
+      font-size: 7.2pt;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    .specs-footer-contacts-links {
+      text-align: right;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8pt;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .specs-footer-contacts-links a {
+      color: var(--gold-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .specs-footer-contacts-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL & ALTTA BİLGİLER)
+       ========================================================================== */
+    .tech-lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(10, 15, 29, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .tech-lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-modal-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      max-width: 780px;
+      width: 95%;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 22px 26px 20px 26px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 35px 70px rgba(0, 0, 0, 0.45);
+    }
+
+    .modal-close-icon-btn {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: #F1F5F9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-icon-btn:hover {
+      background: #E2E8F0;
+      color: #0A0F1D;
+    }
+
+    /* Üstte Ortalanmış Devasa Görsel Vitrini */
+    .modal-visual-hero-stage {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(180deg, #B5B7BC 0%, #CBCCD2 50%, #DFE0E5 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .modal-visual-hero-stage img {
+      max-height: 350px;
+      max-width: 90%;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 28px rgba(10, 15, 29, 0.28));
+      transition: transform 0.3s ease;
+    }
+
+    .modal-product-details-sheet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modal-header-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-code-pill {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0A0F1D;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    .modal-vol-pill {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      color: #DFBD69;
+      background: #0A0F1D;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .modal-brand-stamp {
+      font-family: 'Cinzel', serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+    }
+
+    .modal-product-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19pt;
+      color: #0A0F1D;
+      line-height: 1.15;
+      margin-bottom: 2px;
+    }
+
+    /* 6 Kolonlu / Hücreli Yatay Teknik Parametre Tablosu */
+    .modal-specs-horizontal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 12px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+
+    .modal-spec-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .modal-spec-cell .spec-k {
+      font-size: 6.5pt;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .modal-spec-cell .spec-v {
+      font-size: 8pt;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #0A0F1D;
+      font-weight: 700;
+    }
+
+    .modal-spec-cell.highlight-moq .spec-v {
+      color: #B45309;
+      font-weight: 800;
+    }
+
+    .modal-spec-cell .kartela-accent {
+      color: #1D4ED8;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .modal-description-lead {
+      font-size: 7.5pt;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* Aksiyon Butonları */
+    .modal-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid #E2E8F0;
+    }
+
+    .modal-sample-btn {
+      flex: 1;
+      background: #0A0F1D;
+      color: var(--gold-primary);
+      border: 1px solid var(--gold-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .modal-sample-btn:hover {
+      background: var(--gold-primary);
+      color: #0A0F1D;
+    }
+
+    .modal-cartela-btn {
+      flex: 1;
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .modal-cartela-btn:hover {
+      background: #DBEAFE;
+      color: #1E40AF;
+    }
+
+    .modal-call-btn {
+      background: #10B981;
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      padding: 9px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .modal-call-btn:hover {
+      background: #059669;
+    }
+
+    .modal-dismiss-btn {
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #CBD5E1;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 8.5pt;
+      padding: 9px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .modal-dismiss-btn:hover {
+      background: #E2E8F0;
+      color: #0A0F1D;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       İNTERAKTİF ÜST KONTROL BARİ (PDF ÇIKTI VE GÖRÜNÜM MODU)
+       ========================================================================== -->
+  <header class="interactive-catalog-header">
+    <div class="brand-id-block">
+      <div class="brand-crest">M</div>
+      <div class="brand-name-group">
+        <h1>MERTKOPOLİ PLASTİK</h1>
+        <p>Lüks Ambalaj Koleksiyonu · 2026/2027</p>
+      </div>
+    </div>
+
+    <nav style="display:flex; align-items:center; gap:6px;">
+      <a href="#cover" class="page-nav-pill">Kapak</a>
+      <a href="#page1" class="page-nav-pill">S. 01 Serum</a>
+      <a href="#page2" class="page-nav-pill">S. 02 Losyon</a>
+      <a href="#page3" class="page-nav-pill">S. 03 Bakım</a>
+      <a href="#page4" class="page-nav-pill">S. 04 %100 Elit</a>
+      <a href="#page5" class="page-nav-pill">S. 05 Cam &amp; Pompa</a>
+      <a href="#page6" class="page-nav-pill">S. 06 Şartname</a>
+    </nav>
+
+    <div class="header-quick-actions">
+      <button class="mode-toggle-btn" onclick="openColorCartelaInfo()">
+        <span>🎨 Renk Kartelası</span>
+      </button>
+      <button class="mode-toggle-btn" onclick="togglePhysicalImageMode()">
+        <span>Mod:</span>
+        <strong id="label-image-mode" style="color:#DFBD69;">AI Stüdyo</strong>
+      </button>
+      <button class="print-pdf-btn" onclick="window.print()">
+        <span>🖨️ PDF İndir (A4)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SAYFA 00: LÜKS MİMARİ KAPAK (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page catalog-cover-page" id="cover">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">2026</div>
+    </aside>
+
+    <div class="cover-top-brand-band">
+      <div class="cover-brand-title">M E R T K O P O L İ &nbsp; P L A S T İ K</div>
+      <div class="cover-year-tag">EDITION 2026 / 2027</div>
+    </div>
+
+    <div class="cover-hero-centerpiece">
+      <div class="cover-collection-label">333+ Kalıp Onaylı Kozmetik &amp; Dermokozmetik Koleksiyonu</div>
+      <h1 class="cover-main-heading">Hassas Kalıp,<br>Kusursuz Dokunuş.</h1>
+      
+      <p class="cover-manifesto-para">
+        Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.; dermokozmetik, saç bakım ve medikal sektörleri için Tip-I ağır cam berraklığında Kristal PET ve medikal HDPE ambalaj çözümleri üretmektedir. 333 tescilli stüdyo denetiminden geçen 20 seçkin model, Soft Touch kadife dokunuş uyumu ve endüstri standardı minimum 5.000 adet fabrika sipariş kotası.
+      </p>
+
+      <div class="cover-hero-visual-cluster">
+        <img src="./katalog_assets/GRY-4312_gen.png" alt="Mertkopoli Hero Packshot">
+      </div>
+
+      <div class="cover-metrics-trio">
+        <div class="metric-cell">
+          <div class="metric-val">333+ Kalıp</div>
+          <div class="metric-lbl">Tescilli stüdyo şişe ve kapak portföyümüz.</div>
+        </div>
+        <div class="metric-cell">
+          <div class="metric-val">En Az 5.000 MOQ</div>
+          <div class="metric-lbl">Endüstri standardı fabrika sipariş kotası.</div>
+        </div>
+        <div class="metric-cell">
+          <div class="metric-val">Soft Touch &amp; Kartela</div>
+          <div class="metric-lbl">PE modellerde kadife doku ve zengin renk kartelası.</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="cover-footer-contacts">
+      <div><strong>Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</strong></div>
+      <div>
+        <a href="tel:+902122230501">+90 212 223 0501</a> &nbsp;·&nbsp;
+        <a href="mailto:mertko@mertko.com">mertko@mertko.com</a> &nbsp;·&nbsp;
+        <a href="https://www.mertko.com" target="_blank">www.mertko.com</a>
+      </div>
+      <div>Gümüşsuyu Cad. Ceyhan İş Merkezi Topkapı/İST</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       PAGE1: SERI: LÜKS KOZMETIK & SERUM ŞIŞELERI (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page1">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 01</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">Seri: Lüks Kozmetik & Serum Şişeleri</div>
+        <h2>Premium Serum Koleksiyonu</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Katalog No: MKP-2026-P01</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <section class="equal-product-grid-2x2">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-072-150ML', 'Boston Round Lüks Losyon Şişesi', '150 ml', './katalog_assets/MP-072-150ML_gen.png', './katalog_assets/MP-072-150ML_orig.jpg', 'Kristal PET (Geri Dönüştürülebilir)', '24/410 DIN Standardı', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-072-150ML</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">150 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-072-150ML_gen.png" class="img-ai-mode" alt="MP-072-150ML AI Stüdyo">
+          <img src="./katalog_assets/MP-072-150ML_orig.jpg" class="img-orig-mode" alt="MP-072-150ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Boston Round Lüks Losyon Şişesi</h3>
+        <p class="card-description-text">Yüksek berraklıkta ağır tabanlı gövde yapısı. Losyon pompası ve lüks vidalı kapaklarla tam uyumludur.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Kristal PET (Geri Dönüştürülebilir)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 DIN Standardı</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1209A-75ML', 'Damlalıklı Elit Serum Şişesi', '75 ml', './katalog_assets/MP-1209A-75ML_gen.png', './katalog_assets/MP-1209A-75ML_orig.jpg', 'Tip-I Kozmetik Ağır Cam', '20/410 Altın/Gümüş Damlalık', 'En az 5.000 Adet', '192 Adet / Karton Seperatörlü', 'Optik Ağır Cam', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-1209A-75ML</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">75 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-1209A-75ML_gen.png" class="img-ai-mode" alt="MP-1209A-75ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1209A-75ML_orig.jpg" class="img-orig-mode" alt="MP-1209A-75ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Damlalıklı Elit Serum Şişesi</h3>
+        <p class="card-description-text">Dermokozmetik serumlar ve bakım yağları için farmasötik kalitede Tip-I ağır cam silindir form.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Tip-I Kozmetik Ağır Cam</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">20/410 Altın/Gümüş Damlalık</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Optik Ağır Cam</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-014-50ML', 'Silindirik İnce Sis Sprey Şişesi', '50 ml', './katalog_assets/MPC-014-50ML_gen.png', './katalog_assets/MPC-014-50ML_orig.jpg', 'Medikal HDPE (PE)', '18/410 Fine-Mist Sprey', 'En az 5.000 Adet', '250 Adet / Antistatik Poşetli', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MPC-014-50ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">50 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MPC-014-50ML_gen.png" class="img-ai-mode" alt="MPC-014-50ML AI Stüdyo">
+          <img src="./katalog_assets/MPC-014-50ML_orig.jpg" class="img-orig-mode" alt="MPC-014-50ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Silindirik İnce Sis Sprey Şişesi</h3>
+        <p class="card-description-text">Yüz mistleri ve antiseptik solüsyonlar için homojen mikro damlacık dağılımlı sprey gövdesi.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Medikal HDPE (PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">18/410 Fine-Mist Sprey</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1215A-150ML', 'Konik Omuzlu Bakım Şişesi', '150 ml', './katalog_assets/MP-1215A-150ML_gen.png', './katalog_assets/MP-1215A-150ML_orig.jpg', 'Kristal Parlak PET', '24/410 Flip-Top / Pompa', 'En az 5.000 Adet', '160 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-1215A-150ML</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">150 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-1215A-150ML_gen.png" class="img-ai-mode" alt="MP-1215A-150ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1215A-150ML_orig.jpg" class="img-orig-mode" alt="MP-1215A-150ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Konik Omuzlu Bakım Şişesi</h3>
+        <p class="card-description-text">Ergonomik konik omuz tasarımı ve yüksek kimyasal direnç sağlayan çift katmanlı bariyer yapısı.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Kristal Parlak PET</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Flip-Top / Pompa</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Seri: Lüks Kozmetik & Serum Şişeleri · 2026/27</div>
+      <div class="footer-page-number">01 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       PAGE2: SERI: DERMOKOZMETIK & LOSYON GRUBU (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page2">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 02</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">Seri: Dermokozmetik & Losyon Grubu</div>
+        <h2>Dozaj Pompalı Losyon Şişeleri</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Katalog No: MKP-2026-P02</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <section class="equal-product-grid-2x2">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-050-180ML', 'Dozaj Pompalı Losyon Şişesi', '180 ml', './katalog_assets/MP-050-180ML_gen.png', './katalog_assets/MP-050-180ML_orig.jpg', 'Opak Beyaz Gövde (PE Form)', '24/410 Kilitli Dozaj Pompası', 'En az 5.000 Adet', '120 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-050-180ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">180 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-050-180ML_gen.png" class="img-ai-mode" alt="MP-050-180ML AI Stüdyo">
+          <img src="./katalog_assets/MP-050-180ML_orig.jpg" class="img-orig-mode" alt="MP-050-180ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Dozaj Pompalı Losyon Şişesi</h3>
+        <p class="card-description-text">Yoğun kıvamlı nemlendiriciler için hava temassız kilitli dozajlama pompası mekanizması.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Opak Beyaz Gövde (PE Form)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Kilitli Dozaj Pompası</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-26A-180ML', 'Geniş Ağızlı Şampuan Şişesi', '180 ml', './katalog_assets/MPK-26A-180ML_gen.png', './katalog_assets/MPK-26A-180ML_orig.jpg', 'Yarı-Saydam HDPE (FDA Onaylı PE)', '28/410 Disc-Top & Flip-Top', 'En az 5.000 Adet', '180 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MPK-26A-180ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">180 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MPK-26A-180ML_gen.png" class="img-ai-mode" alt="MPK-26A-180ML AI Stüdyo">
+          <img src="./katalog_assets/MPK-26A-180ML_orig.jpg" class="img-orig-mode" alt="MPK-26A-180ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Geniş Ağızlı Şampuan Şişesi</h3>
+        <p class="card-description-text">Banyo ve kuaför serileri için esnek gövde, hızlı geri esneme ve sızdırmaz valf mimarisi.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Yarı-Saydam HDPE (FDA Onaylı PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">28/410 Disc-Top & Flip-Top</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-063-200ML', 'Silindirik Vücut & Saç Bakım Şişesi', '200 ml', './katalog_assets/MP-063-200ML_gen.png', './katalog_assets/MP-063-200ML_orig.jpg', 'Opak Beyaz HDPE (PE)', '24/410 Vidalı & Pompa Başlık', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-063-200ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">200 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-063-200ML_gen.png" class="img-ai-mode" alt="MP-063-200ML AI Stüdyo">
+          <img src="./katalog_assets/MP-063-200ML_orig.jpg" class="img-orig-mode" alt="MP-063-200ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Silindirik Vücut & Saç Bakım Şişesi</h3>
+        <p class="card-description-text">Tampon ve serigrafi baskıya uygun pürüzsüz gövde. Kozmetik losyonlar için idealdir.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Opak Beyaz HDPE (PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Vidalı & Pompa Başlık</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-003-150ML', 'Düz Tabanlı Kozmetik Tonik Şişesi', '150 ml', './katalog_assets/MPC-003-150ML_gen.png', './katalog_assets/MPC-003-150ML_orig.jpg', 'Yüksek Berraklıkta Kristal PET', '20/410 Alüminyum Vidalı Kapak', 'En az 5.000 Adet', '180 Adet / Koruyucu Koli', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MPC-003-150ML</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">150 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MPC-003-150ML_gen.png" class="img-ai-mode" alt="MPC-003-150ML AI Stüdyo">
+          <img src="./katalog_assets/MPC-003-150ML_orig.jpg" class="img-orig-mode" alt="MPC-003-150ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Düz Tabanlı Kozmetik Tonik Şişesi</h3>
+        <p class="card-description-text">Minimalist estetik hatlar, cam şeffaflığında hafif gövde ve kırılmaya dayanıklı yapı.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Yüksek Berraklıkta Kristal PET</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">20/410 Alüminyum Vidalı Kapak</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Seri: Dermokozmetik & Losyon Grubu · 2026/27</div>
+      <div class="footer-page-number">02 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       PAGE3: SERI: BÜYÜK HACIMLI PROFESYONEL SERI (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page3">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 03</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">Seri: Büyük Hacimli Profesyonel Seri</div>
+        <h2>Kuaför & Salon Bakım Şişeleri</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Katalog No: MKP-2026-P03</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <section class="equal-product-grid-2x2">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1226A-250ML', 'Silindirik Kuaför Bakım Şişesi', '250 ml', './katalog_assets/MP-1226A-250ML_gen.png', './katalog_assets/MP-1226A-250ML_orig.jpg', 'Ağır Hizmet Kristal PET', '24/410 Lüks Losyon Pompası', 'En az 5.000 Adet', '120 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-1226A-250ML</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">250 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-1226A-250ML_gen.png" class="img-ai-mode" alt="MP-1226A-250ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1226A-250ML_orig.jpg" class="img-orig-mode" alt="MP-1226A-250ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Silindirik Kuaför Bakım Şişesi</h3>
+        <p class="card-description-text">Saç bakım kremleri ve profesyonel salon losyonları için yüksek hacimli estetik silindir form.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Ağır Hizmet Kristal PET</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Lüks Losyon Pompası</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-2259-250ML', 'Oval Ergonomik Şampuan Şişesi', '250 ml', './katalog_assets/MP-2259-250ML_gen.png', './katalog_assets/MP-2259-250ML_orig.jpg', 'Opak Beyaz HDPE (PE)', '28/410 Çift Kademeli Flip-Top', 'En az 5.000 Adet', '108 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-2259-250ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">250 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-2259-250ML_gen.png" class="img-ai-mode" alt="MP-2259-250ML AI Stüdyo">
+          <img src="./katalog_assets/MP-2259-250ML_orig.jpg" class="img-orig-mode" alt="MP-2259-250ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Oval Ergonomik Şampuan Şişesi</h3>
+        <p class="card-description-text">Ele tam oturan kavrama kanalları, duş ortamında kaymayı engelleyen kadifemsi ergonomik yüzey.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Opak Beyaz HDPE (PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">28/410 Çift Kademeli Flip-Top</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-31A-250ML', 'Köşeli Tasarım Losyon Şişesi', '250 ml', './katalog_assets/MPK-31A-250ML_gen.png', './katalog_assets/MPK-31A-250ML_orig.jpg', 'Opak Beyaz Polimer (PE Form)', '24/410 Dozaj Pompası', 'En az 5.000 Adet', '130 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MPK-31A-250ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">250 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MPK-31A-250ML_gen.png" class="img-ai-mode" alt="MPK-31A-250ML AI Stüdyo">
+          <img src="./katalog_assets/MPK-31A-250ML_orig.jpg" class="img-orig-mode" alt="MPK-31A-250ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Köşeli Tasarım Losyon Şişesi</h3>
+        <p class="card-description-text">Raf görünürlüğünü artıran keskin omuz hatları ve modern köşe detaylı mimari tasarım.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Opak Beyaz Polimer (PE Form)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Dozaj Pompası</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-221-500ML', 'Geniş Hacimli Aile Boyu Şişe', '500 ml', './katalog_assets/MP-221-500ML_gen.png', './katalog_assets/MP-221-500ML_orig.jpg', 'Geri Dönüştürülmüş PCR / HDPE (PE)', '28/410 Pompa & Vidalı Seçenek', 'En az 5.000 Adet', '80 Adet / Ağır Hizmet Kolisi', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">MP-221-500ML</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">500 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/MP-221-500ML_gen.png" class="img-ai-mode" alt="MP-221-500ML AI Stüdyo">
+          <img src="./katalog_assets/MP-221-500ML_orig.jpg" class="img-orig-mode" alt="MP-221-500ML Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Geniş Hacimli Aile Boyu Şişe</h3>
+        <p class="card-description-text">Sıvı sabun, duş jeli ve aile boyu şampuanlar için sağlam taban geometrisi ve yüksek stabilite.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Geri Dönüştürülmüş PCR / HDPE (PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">28/410 Pompa & Vidalı Seçenek</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Seri: Büyük Hacimli Profesyonel Seri · 2026/27</div>
+      <div class="footer-page-number">03 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       PAGE4: SERI: STÜDYO DENETIMI %100 TAM UYUMLU SERI (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page4">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 04</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">Seri: Stüdyo Denetimi %100 Tam Uyumlu Seri</div>
+        <h2>Özel Kalıp Elit Şişe Serisi</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Katalog No: MKP-2026-P04</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <section class="equal-product-grid-2x2">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4312', 'Elit Kozmetik Losyon & Jel Şişesi', '200 ml', './katalog_assets/GRY-4312_gen.png', './katalog_assets/GRY-4312_orig.jpg', 'Lüks Kalın Tabanlı Ağır PET', '24/410 Metalize Pompa Uyumlu', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4312</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">200 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4312_gen.png" class="img-ai-mode" alt="GRY-4312 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4312_orig.jpg" class="img-orig-mode" alt="GRY-4312 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Elit Kozmetik Losyon & Jel Şişesi</h3>
+        <p class="card-description-text">Stüdyo denetiminde %100 tam uyum sağlayan kusursuz silüet; metalize pompa başlıklarıyla eşsiz lüks sunum.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Lüks Kalın Tabanlı Ağır PET</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Metalize Pompa Uyumlu</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4314', 'Dermokozmetik Damlalıklı Bakım Şişesi', '100 ml', './katalog_assets/GRY-4314_gen.png', './katalog_assets/GRY-4314_orig.jpg', 'Farmasötik Tip-I Ağır Cam', '20/410 Pipetli Cam Damlalık', 'En az 5.000 Adet', '160 Adet / Seperatörlü Koli', 'Optik Ağır Cam', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4314</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">100 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4314_gen.png" class="img-ai-mode" alt="GRY-4314 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4314_orig.jpg" class="img-orig-mode" alt="GRY-4314 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Dermokozmetik Damlalıklı Bakım Şişesi</h3>
+        <p class="card-description-text">Stüdyo denetiminde %100 onaylı; aktif kozmetik bileşenler için kimyasal inert Tip-I cam form.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Farmasötik Tip-I Ağır Cam</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">20/410 Pipetli Cam Damlalık</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Optik Ağır Cam</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4338', 'Silindirik Lüks Köpük & Şampuan Şişesi', '250 ml', './katalog_assets/GRY-4338_gen.png', './katalog_assets/GRY-4338_orig.jpg', 'Mat Gövde HDPE Polimer (PE)', '28/410 Köpük & Losyon Pompa', 'En az 5.000 Adet', '112 Adet / Güçlendirilmiş Koli', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4338</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">250 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4338_gen.png" class="img-ai-mode" alt="GRY-4338 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4338_orig.jpg" class="img-orig-mode" alt="GRY-4338 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Silindirik Lüks Köpük & Şampuan Şişesi</h3>
+        <p class="card-description-text">Stüdyo denetiminde %100 tam puan; modern mat gövde ve lüks köpük pompalarıyla kusursuz uyum.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Mat Gövde HDPE Polimer (PE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">28/410 Köpük & Losyon Pompa</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4086', 'Geniş Tabanlı Profesyonel Bakım Şişesi', '300 ml', './katalog_assets/GRY-4086_gen.png', './katalog_assets/GRY-4086_orig.jpg', 'Yüksek Yoğunluklu PE (HDPE)', '28/410 Profesyonel Dozaj Pompa', 'En az 5.000 Adet', '96 Adet / Bölmeli Palet Kolisi', 'Soft Touch uyumludur', true)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4086</span>
+          <div class="header-right-badges">
+            <span class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span class="product-vol-tag">300 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4086_gen.png" class="img-ai-mode" alt="GRY-4086 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4086_orig.jpg" class="img-orig-mode" alt="GRY-4086 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Geniş Tabanlı Profesyonel Bakım Şişesi</h3>
+        <p class="card-description-text">Stüdyo denetiminde %96 skor; ağır taban dengesi ve profesyonel klinik salon serileri için optimum gövde.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Yüksek Yoğunluklu PE (HDPE)</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">28/410 Profesyonel Dozaj Pompa</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col softtouch-accent"><strong>Soft Touch uyumludur</strong></td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Seri: Stüdyo Denetimi %100 Tam Uyumlu Seri · 2026/27</div>
+      <div class="footer-page-number">04 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       PAGE5: SERI: AĞIR CAM & DAMLALIKLI ELIT GRUP (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page5">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 05</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">Seri: Ağır Cam & Damlalıklı Elit Grup</div>
+        <h2>Lüks Parfümeri & Damlalık Serisi</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Katalog No: MKP-2026-P05</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <section class="equal-product-grid-2x2">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4275', 'Kare Formlu Lüks Parfüm & Tonik Şişesi', '100 ml', './katalog_assets/GRY-4275_gen.png', './katalog_assets/GRY-4275_orig.jpg', 'Optik Berraklıkta Kalın Cam', '18/415 Crimp & Vida Uyumlu', 'En az 5.000 Adet', '120 Adet / Özel Köpük Yataklı', 'Optik Ağır Cam', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4275</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">100 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4275_gen.png" class="img-ai-mode" alt="GRY-4275 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4275_orig.jpg" class="img-orig-mode" alt="GRY-4275 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Kare Formlu Lüks Parfüm & Tonik Şişesi</h3>
+        <p class="card-description-text">Kusursuz kristal cam taban kütlesi; niş parfümeri, oda kokuları ve lüks kolonya serileri için özel tasarım.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Optik Berraklıkta Kalın Cam</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">18/415 Crimp & Vida Uyumlu</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Optik Ağır Cam</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4316', 'Silindirik Mat Damlalıklı Şişe', '150 ml', './katalog_assets/GRY-4316_gen.png', './katalog_assets/GRY-4316_orig.jpg', 'Buzlu Cam Efektli Kristal PET', '20/410 Hassas Dozaj Damlalığı', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4316</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">150 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4316_gen.png" class="img-ai-mode" alt="GRY-4316 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4316_orig.jpg" class="img-orig-mode" alt="GRY-4316 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Silindirik Mat Damlalıklı Şişe</h3>
+        <p class="card-description-text">Buzlu mat cam zarafetini hafif ve kırılmaz PET yapısıyla birleştiren yüksek teknolojili lüks serum ambalajı.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Buzlu Cam Efektli Kristal PET</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">20/410 Hassas Dozaj Damlalığı</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4320', 'Konik Tabanlı Dermokozmetik Şişe', '200 ml', './katalog_assets/GRY-4320_gen.png', './katalog_assets/GRY-4320_orig.jpg', 'Yüksek Bariyerli Şeffaf PETG', '24/410 Kilitli Pompa Başlık', 'En az 5.000 Adet', '140 Adet / Bölmeli Koli', 'Kristal Parlak (PETG)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4320</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">200 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4320_gen.png" class="img-ai-mode" alt="GRY-4320 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4320_orig.jpg" class="img-orig-mode" alt="GRY-4320 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Konik Tabanlı Dermokozmetik Şişe</h3>
+        <p class="card-description-text">Optik şeffaflık ve üstün kimyasal bariyer özellikleri sağlayan özel PETG kopolyester reçine yapısı.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Yüksek Bariyerli Şeffaf PETG</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Kilitli Pompa Başlık</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PETG)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4324', 'Ağır Tabanlı Kozmetik Dispenser Şişesi', '250 ml', './katalog_assets/GRY-4324_gen.png', './katalog_assets/GRY-4324_orig.jpg', 'Kristal Polimer / Cam Ağırlığında', '24/410 Losyon & Jel Pompası', 'En az 5.000 Adet', '110 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+        <div class="card-top-header">
+          <span class="product-code-tag">GRY-4324</span>
+          <div class="header-right-badges">
+            
+            <span class="product-vol-tag">250 ml</span>
+          </div>
+        </div>
+        <div class="packshot-uniform-frame">
+          <img src="./katalog_assets/GRY-4324_gen.png" class="img-ai-mode" alt="GRY-4324 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4324_orig.jpg" class="img-orig-mode" alt="GRY-4324 Fiziksel Orijinal">
+          <span class="inspect-cue-badge">🔍 İncele</span>
+        </div>
+        <h3 class="card-title-text">Ağır Tabanlı Kozmetik Dispenser Şişesi</h3>
+        <p class="card-description-text">Ağır taban kütlesiyle cam hissi veren lüks polimer yapısı; yüksek katma değerli kozmetik ürünler için üretildi.</p>
+        <table class="card-specs-matrix">
+          <tr><td class="label-col">Hammadde:</td><td class="value-col">Kristal Polimer / Cam Ağırlığında</td></tr>
+          <tr><td class="label-col">Ağız / Boyun:</td><td class="value-col">24/410 Losyon & Jel Pompası</td></tr>
+          <tr><td class="label-col">Renk Seçenekleri:</td><td class="value-col kartela-val" title="Tüm Pantone ve özel renk seçenekleri için kartelamızı inceleyebilirsiniz">Kartelamızı inceleyebilirsiniz</td></tr>
+          <tr><td class="label-col">Yüzey / Uyumluluk:</td><td class="value-col surface-standard">Kristal Parlak (PET)</td></tr>
+          <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Seri: Ağır Cam & Damlalıklı Elit Grup · 2026/27</div>
+      <div class="footer-page-number">05 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       SAYFA 06: TEKNİK ŞARTNAME & SİPARİŞ PROTOKOLLERİ (A4 PORTRAIT)
+       ========================================================================== -->
+  <article class="a4-catalog-page" id="page6">
+    <aside class="page-left-spine">
+      <div class="spine-emblem-icon"></div>
+      <div class="spine-text-vertical">MERTKOPOLİ <span>PLASTİK</span></div>
+      <div class="spine-page-tag">S. 06</div>
+    </aside>
+
+    <header class="page-header-row">
+      <div class="page-header-title-box">
+        <div class="series-pre-title">ENDÜSTRİYEL STANDARTLAR &amp; KALİTE GÜVENCESİ</div>
+        <h2>Teknik Şartname &amp; Sipariş Matrisi</h2>
+      </div>
+      <div class="page-header-meta-box">
+        <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
+        <div>Revizyon: 2026-REV-6</div>
+        <div>25 Ekim 2026</div>
+      </div>
+    </header>
+
+    <main style="flex: 1; display:flex; flex-direction:column; justify-content:space-between; margin-bottom: 4px;">
+      <!-- Bölüm 1: Sipariş & Üretim Şartnamesi -->
+      <div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:8.5pt; font-weight:700; color:#0A0F1D; margin-bottom:6px; letter-spacing:0.5px;">
+          1. Üretim, Renk Kartelası ve Yüzey İşlem Protokolü (En Az 5.000 Adet Standardı)
+        </h3>
+        <table class="specs-table-full">
+          <thead>
+            <tr>
+              <th>Üretim / İşlem Türü</th>
+              <th>Hammadde Standardı</th>
+              <th>Minimum Sipariş (MOQ)</th>
+              <th>Ortalama Termin</th>
+              <th>Özelleştirme &amp; Kartela Seçenekleri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Standart Katalog Üretimi</strong></td>
+              <td>Kristal PET, HDPE, PP, PETG</td>
+              <td><span class="specs-badge-moq">En az 5.000 Adet</span></td>
+              <td>3 - 7 İş Günü</td>
+              <td>Standart şeffaf, beyaz ve amber stok renkler</td>
+            </tr>
+            <tr>
+              <td><strong>Özel Masterbatch Renklendirme</strong></td>
+              <td>Pantone Kodlu Gövde</td>
+              <td><span class="specs-badge-moq">En az 5.000 Adet</span></td>
+              <td>10 - 14 İş Günü</td>
+              <td><span class="specs-badge-kartela">Kartelamızı inceleyebilirsiniz</span> — Tüm Pantone tonları, sedefli &amp; opak seçenekler</td>
+            </tr>
+            <tr>
+              <td><strong>Soft Touch Kadife Kaplama</strong></td>
+              <td>PE &amp; HDPE Şişeler</td>
+              <td><span class="specs-badge-moq">En az 5.000 Adet</span></td>
+              <td>7 - 10 İş Günü</td>
+              <td><span class="specs-badge-softtouch">Soft Touch uyumludur</span> — Kadife mat dokunuş (Kristal PET modeller hariçtir)</td>
+            </tr>
+            <tr>
+              <td><strong>Sıcak Yaldız &amp; Varak Baskı</strong></td>
+              <td>Kapak &amp; Gövde Folyo</td>
+              <td><span class="specs-badge-moq">En az 5.000 Adet</span></td>
+              <td>7 - 10 İş Günü</td>
+              <td>Parlak altın, mat gümüş, bronz ve holografik varak</td>
+            </tr>
+            <tr>
+              <td><strong>Serigrafi &amp; Tampon Baskı</strong></td>
+              <td>UV Dayanımlı Mürekkep</td>
+              <td><span class="specs-badge-moq">En az 5.000 Adet</span></td>
+              <td>8 - 12 İş Günü</td>
+              <td>360° gövde serigrafi, çok renkli tampon baskı</td>
+            </tr>
+            <tr>
+              <td><strong>Özel Tasarım Kalıp İmalatı</strong></td>
+              <td>Alüminyum / Çelik Kalıp</td>
+              <td><span class="specs-badge-moq">25.000 Adet</span></td>
+              <td>4 - 6 Hafta</td>
+              <td>Müşteriye özel 3D kalıp tasarımı ve tescili</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bölüm 2: Kalite ve Paketleme -->
+      <div>
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:8.5pt; font-weight:700; color:#0A0F1D; margin-bottom:6px; letter-spacing:0.5px;">
+          2. Renk Kartelası, Soft Touch Güvencesi ve İhracat Paketleme Standartları
+        </h3>
+        <div class="packaging-protocol-grid">
+          <div class="protocol-card">
+            <h4>🎨 Zengin Renk Kartelası</h4>
+            <p>Tüm ürünlerimizde renk seçenekleri için kartelamızı inceleyebilirsiniz. Standart renklerin haricinde kurumsal kimliğinize uygun tüm özel Pantone kodlarında masterbatch üretimi sağlanır.</p>
+          </div>
+          <div class="protocol-card">
+            <h4>✨ Soft Touch Uyumluluğu</h4>
+            <p>Tüm PE (HDPE, PCR-HDPE) ve PE görünümlü opak şişelerimiz kadife dokunuşlu Soft Touch mat yüzey işlemine %100 uyumludur. Kristal berrak PET şişelerde bu durum bulunmamaktadır.</p>
+          </div>
+          <div class="protocol-card">
+            <h4>📦 Euro-Palet &amp; Toz Bariyeri</h4>
+            <p>Koli içi antistatik PE torbalama ile mikro partikül tutunması engellenir. 80x120 cm fümigasyonlu paletler üzerinde köşe koruyuculu termal shrink ambalajla sevk edilir.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Çağrı ve İletişim Kutusu -->
+      <div class="specs-footer-callout">
+        <div>
+          <h3>Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</h3>
+          <p>Adres: Gümüşsuyu Caddesi Ceyhan İş Merkezi No:17 / 47 Topkapı/İstanbul</p>
+          <p style="margin-top:2px;">
+            <a href="tel:+902122230501" style="color:#FFFFFF; text-decoration:none; font-weight:700;">+90 212 223 0501</a> &nbsp;·&nbsp;
+            <a href="mailto:mertko@mertko.com" style="color:var(--gold-primary); text-decoration:none; font-weight:600;">mertko@mertko.com</a> &nbsp;·&nbsp;
+            <a href="https://www.mertko.com" target="_blank" style="color:var(--gold-primary); text-decoration:none; font-weight:600;">www.mertko.com</a>
+          </p>
+        </div>
+        <div class="specs-footer-contacts-links">
+          <div style="font-size:7pt; color:#94A3B8; text-transform:uppercase; letter-spacing:1px;">Kalite Güvencesi</div>
+          <div style="font-weight:700; color:#FFFFFF;">ISO 9001:2015 · FDA ONAYLI</div>
+          <div style="font-size:6.5pt; color:var(--gold-primary);">333 Kalıp Stüdyo Standardı</div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer-row">
+      <div class="footer-company-legal">Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti.</div>
+      <div>Endüstriyel Teknik Şartname &amp; Kalite Protokolü</div>
+      <div class="footer-page-number">06 / 06</div>
+    </footer>
+  </article>
+
+  <!-- ==========================================================================
+       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL & ALTTA BİLGİLER)
+       ========================================================================== -->
+  <div class="tech-lightbox-overlay" id="inspectionOverlay" onclick="closeProductInspectionModal(event)">
+    <div class="lightbox-modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close-icon-btn" onclick="closeProductInspectionModal()">&times;</button>
+      
+      <!-- Üst: Ortalanmış Devasa Görsel Vitrini -->
+      <div class="modal-visual-hero-stage">
+        <img id="modalProductImg" src="" alt="Zoom Packshot">
+      </div>
+
+      <!-- Alt: Ürün Bilgileri ve Teknik Parametreler -->
+      <div class="modal-product-details-sheet">
+        <div class="modal-header-line">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span id="modalProductCode" class="modal-code-pill">KOD</span>
+            <span id="modalSoftTouchBadge" style="display:none;" class="softtouch-top-pill">Soft Touch Uyumludur</span>
+            <span id="modalProductVol" class="modal-vol-pill">150 ml</span>
+          </div>
+          <div class="modal-brand-stamp">Mertkopoli Plastik</div>
+        </div>
+
+        <h2 id="modalProductTitle" class="modal-product-title">Ürün Başlığı</h2>
+
+        <!-- 6 Hücreli Kompakt Teknik Tablo -->
+        <div class="modal-specs-horizontal-grid">
+          <div class="modal-spec-cell">
+            <span class="spec-k">Hammadde Standardı</span>
+            <strong id="modalProductMat" class="spec-v">-</strong>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="spec-k">Ağız / DIN Standardı</span>
+            <strong id="modalProductNeck" class="spec-v">-</strong>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="spec-k">Koli / Paket İçi</span>
+            <strong id="modalProductBox" class="spec-v">-</strong>
+          </div>
+          <div class="modal-spec-cell">
+            <span class="spec-k">Renk Seçenekleri</span>
+            <strong id="modalProductColor" class="spec-v kartela-accent" onclick="openColorCartelaInfo()" title="Kartelayı incelemek için tıklayınız">Kartelamızı inceleyebilirsiniz 🎨</strong>
+          </div>
+          <div class="modal-spec-cell" id="modalSurfaceCell">
+            <span class="spec-k">Yüzey &amp; Dokunuş</span>
+            <strong id="modalProductSurface" class="spec-v">-</strong>
+          </div>
+          <div class="modal-spec-cell highlight-moq">
+            <span class="spec-k">Minimum Sipariş (MOQ)</span>
+            <strong id="modalProductMoq" class="spec-v">En az 5.000 Adet</strong>
+          </div>
+        </div>
+
+        <p class="modal-description-lead" id="modalProductDesc">
+          Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti. tescilli stüdyo kalıbıdır. Otomatik dolum hatlarına, sızdırmazlık testlerine ve etiketleme makinelerine tam uyumludur.
+        </p>
+
+        <!-- Aksiyon Butonları -->
+        <div class="modal-actions-row">
+          <button class="modal-cartela-btn" onclick="openColorCartelaInfo()">
+            🎨 Renk Kartelasını İncele
+          </button>
+          <button class="modal-sample-btn" onclick="alert('Numune ve kartela talebiniz Mertkopoli Plastik satış ekibine iletildi.')">
+            Numune Talep Et
+          </button>
+          <a href="tel:+902122230501" class="modal-call-btn">
+            +90 212 223 0501
+          </a>
+          <button class="modal-dismiss-btn" onclick="closeProductInspectionModal()">
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- İnteraktif JavaScript Fonksiyonları -->
+  <script>
+    function togglePhysicalImageMode() {
+      document.body.classList.toggle('view-physical-active');
+      const isPhysical = document.body.classList.contains('view-physical-active');
+      const label = document.getElementById('label-image-mode');
+      if (isPhysical) {
+        label.textContent = 'Fiziksel Orijinal';
+        label.style.color = '#B89242';
+      } else {
+        label.textContent = 'AI Stüdyo';
+        label.style.color = '#CBD5E1';
+      }
+    }
+
+    function openProductInspectionModal(code, title, vol, aiImg, origImg, mat, neck, moq, box, surface, isPe) {
+      const isPhysical = document.body.classList.contains('view-physical-active');
+      document.getElementById('modalProductImg').src = isPhysical ? origImg : aiImg;
+      document.getElementById('modalProductCode').textContent = code;
+      document.getElementById('modalProductTitle').textContent = title;
+      document.getElementById('modalProductVol').textContent = vol;
+      document.getElementById('modalProductMat').textContent = mat;
+      document.getElementById('modalProductNeck').textContent = neck;
+      document.getElementById('modalProductMoq').textContent = moq;
+      document.getElementById('modalProductBox').textContent = box;
+      
+      const badge = document.getElementById('modalSoftTouchBadge');
+      const surfEl = document.getElementById('modalProductSurface');
+      if (isPe) {
+        badge.style.display = 'inline-flex';
+        surfEl.innerHTML = '<span style="color:#047857; font-weight:800;">✓ Soft Touch uyumludur</span>';
+      } else {
+        badge.style.display = 'none';
+        surfEl.innerHTML = '<span style="color:#475569; font-weight:600;">' + surface + '</span>';
+      }
+
+      document.getElementById('inspectionOverlay').classList.add('active');
+    }
+
+    function closeProductInspectionModal(e) {
+      if (e && e.target !== e.currentTarget && !e.target.classList.contains('modal-close-icon-btn') && !e.target.classList.contains('modal-dismiss-btn')) return;
+      document.getElementById('inspectionOverlay').classList.remove('active');
+    }
+
+    function openColorCartelaInfo() {
+      alert("MERTKOPOLİ PLASTİK — RENK KARTELASI VE YÜZEY BİLGİLENDİRMESİ\n\n" +
+            "• Renk Seçenekleri: Standart şeffaf, saf beyaz ve medikal amber dışında; kurumsal talebinize özel tüm Pantone kodlarında masterbatch gövde renklendirme yapılmaktadır.\n" +
+            "• Yüzey Efektleri: Sedefli, metalik, opak, yarı saydam ve mat gövde varyasyonları mevcuttur.\n" +
+            "• Soft Touch Uyumu: Tüm PE (HDPE, LDPE, PCR) şişelerimiz kadife dokunuşlu Soft Touch yüzey kaplamasına tam uyumludur (PET şişelerde Soft Touch kaplama yapılmamaktadır).\n" +
+            "• Minimum Sipariş (MOQ): En az 5.000 Adet.\n\n" +
+            "Fiziksel renk kartelası ve özel numune talepleriniz için:\n" +
+            "Tel: +90 212 223 0501 | E-Posta: mertko@mertko.com | www.mertko.com");
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProductInspectionModal();
+    });
+  </script>
+</body>
+</html>
