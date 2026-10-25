@@ -877,7 +877,7 @@
     }
 
     /* ==========================================================================
-       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL & ALTTA BİLGİLER)
+       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL, ADET VE WHATSAPP BUTONU)
        ========================================================================== */
     .tech-lightbox-overlay {
       display: none;
@@ -937,7 +937,7 @@
     /* Üstte Ortalanmış Devasa Görsel Vitrini */
     .modal-visual-hero-stage {
       width: 100%;
-      height: 380px;
+      height: 360px;
       background: linear-gradient(180deg, #B5B7BC 0%, #CBCCD2 50%, #DFE0E5 100%);
       border-radius: 8px;
       display: flex;
@@ -945,12 +945,12 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       border: 1px solid rgba(255, 255, 255, 0.7);
     }
 
     .modal-visual-hero-stage img {
-      max-height: 350px;
+      max-height: 335px;
       max-width: 90%;
       object-fit: contain;
       filter: drop-shadow(0 20px 28px rgba(10, 15, 29, 0.28));
@@ -1007,7 +1007,7 @@
       margin-bottom: 2px;
     }
 
-    /* 6 Kolonlu / Hücreli Yatay Teknik Parametre Tablosu */
+    /* 6 Hücreli Yatay Teknik Parametre Tablosu */
     .modal-specs-horizontal-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1051,10 +1051,113 @@
       text-decoration: underline;
     }
 
-    .modal-description-lead {
-      font-size: 7.5pt;
+    /* Sipariş Adedi & Stepper Satırı */
+    .modal-order-quantity-box {
+      background: #F1F5F9;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .qty-prompt-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .qty-main-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #0A0F1D;
+    }
+
+    .qty-moq-hint {
+      font-size: 7pt;
+      color: #64748B;
+    }
+
+    .qty-stepper-control {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .qty-step-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #94A3B8;
+      background: #FFFFFF;
+      font-weight: 700;
+      font-size: 14pt;
+      color: #0A0F1D;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .qty-step-btn:hover {
+      background: #0A0F1D;
+      color: #FFFFFF;
+    }
+
+    .qty-input-field {
+      width: 100px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1.5px solid #0A0F1D;
+      background: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      text-align: center;
+      color: #0A0F1D;
+    }
+
+    .qty-input-field:focus {
+      outline: none;
+      border-color: #25D366;
+      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.2);
+    }
+
+    .qty-unit-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8pt;
+      font-weight: 600;
       color: #475569;
-      line-height: 1.5;
+    }
+
+    /* Adet Uyarı Bandı */
+    .quantity-warning-banner {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #991B1B;
+      font-size: 7.5pt;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-description-lead {
+      font-size: 7.2pt;
+      color: #475569;
+      line-height: 1.45;
     }
 
     /* Aksiyon Butonları */
@@ -1066,23 +1169,29 @@
       border-top: 1px solid #E2E8F0;
     }
 
-    .modal-sample-btn {
-      flex: 1;
-      background: #0A0F1D;
-      color: var(--gold-primary);
-      border: 1px solid var(--gold-primary);
+    .modal-whatsapp-btn {
+      flex: 2;
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 8.5pt;
-      padding: 9px 16px;
+      font-size: 9pt;
+      padding: 10px 18px;
       border-radius: 6px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
       transition: all 0.2s ease;
     }
 
-    .modal-sample-btn:hover {
-      background: var(--gold-primary);
-      color: #0A0F1D;
+    .modal-whatsapp-btn:hover {
+      background: #1EBE5D;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
     }
 
     .modal-cartela-btn {
@@ -1092,39 +1201,20 @@
       border: 1px solid #BFDBFE;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 8.5pt;
-      padding: 9px 16px;
+      font-size: 8pt;
+      padding: 10px 12px;
       border-radius: 6px;
       cursor: pointer;
       transition: all 0.2s ease;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .modal-cartela-btn:hover {
       background: #DBEAFE;
       color: #1E40AF;
-    }
-
-    .modal-call-btn {
-      background: #10B981;
-      color: #FFFFFF;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 8.5pt;
-      padding: 9px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .modal-call-btn:hover {
-      background: #059669;
     }
 
     .modal-dismiss-btn {
@@ -1134,7 +1224,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 8.5pt;
-      padding: 9px 16px;
+      padding: 10px 16px;
       border-radius: 6px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -1208,7 +1298,7 @@
       </p>
 
       <div class="cover-hero-visual-cluster">
-        <img src="./katalog_assets/GRY-4312_gen.png" alt="Mertkopoli Hero Packshot">
+        <img src="./katalog_assets/GRY-4312_gen.webp" alt="Mertkopoli Hero Packshot">
       </div>
 
       <div class="cover-metrics-trio">
@@ -1261,7 +1351,7 @@
     </header>
 
     <section class="equal-product-grid-2x2">
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-072-150ML', 'Boston Round Lüks Losyon Şişesi', '150 ml', './katalog_assets/MP-072-150ML_gen.png', './katalog_assets/MP-072-150ML_orig.jpg', 'Kristal PET (Geri Dönüştürülebilir)', '24/410 DIN Standardı', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-072-150ML', 'Boston Round Lüks Losyon Şişesi', '150 ml', './katalog_assets/MP-072-150ML_gen.webp', './katalog_assets/MP-072-150ML_orig.webp', 'Kristal PET (Geri Dönüştürülebilir)', '24/410 DIN Standardı', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-072-150ML</span>
           <div class="header-right-badges">
@@ -1270,8 +1360,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-072-150ML_gen.png" class="img-ai-mode" alt="MP-072-150ML AI Stüdyo">
-          <img src="./katalog_assets/MP-072-150ML_orig.jpg" class="img-orig-mode" alt="MP-072-150ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-072-150ML_gen.webp" class="img-ai-mode" alt="MP-072-150ML AI Stüdyo">
+          <img src="./katalog_assets/MP-072-150ML_orig.webp" class="img-orig-mode" alt="MP-072-150ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Boston Round Lüks Losyon Şişesi</h3>
@@ -1284,7 +1374,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1209A-75ML', 'Damlalıklı Elit Serum Şişesi', '75 ml', './katalog_assets/MP-1209A-75ML_gen.png', './katalog_assets/MP-1209A-75ML_orig.jpg', 'Tip-I Kozmetik Ağır Cam', '20/410 Altın/Gümüş Damlalık', 'En az 5.000 Adet', '192 Adet / Karton Seperatörlü', 'Optik Ağır Cam', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1209A-75ML', 'Damlalıklı Elit Serum Şişesi', '75 ml', './katalog_assets/MP-1209A-75ML_gen.webp', './katalog_assets/MP-1209A-75ML_orig.webp', 'Tip-I Kozmetik Ağır Cam', '20/410 Altın/Gümüş Damlalık', 'En az 5.000 Adet', '192 Adet / Karton Seperatörlü', 'Optik Ağır Cam', false)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-1209A-75ML</span>
           <div class="header-right-badges">
@@ -1293,8 +1383,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-1209A-75ML_gen.png" class="img-ai-mode" alt="MP-1209A-75ML AI Stüdyo">
-          <img src="./katalog_assets/MP-1209A-75ML_orig.jpg" class="img-orig-mode" alt="MP-1209A-75ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-1209A-75ML_gen.webp" class="img-ai-mode" alt="MP-1209A-75ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1209A-75ML_orig.webp" class="img-orig-mode" alt="MP-1209A-75ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Damlalıklı Elit Serum Şişesi</h3>
@@ -1307,7 +1397,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-014-50ML', 'Silindirik İnce Sis Sprey Şişesi', '50 ml', './katalog_assets/MPC-014-50ML_gen.png', './katalog_assets/MPC-014-50ML_orig.jpg', 'Medikal HDPE (PE)', '18/410 Fine-Mist Sprey', 'En az 5.000 Adet', '250 Adet / Antistatik Poşetli', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-014-50ML', 'Silindirik İnce Sis Sprey Şişesi', '50 ml', './katalog_assets/MPC-014-50ML_gen.webp', './katalog_assets/MPC-014-50ML_orig.webp', 'Medikal HDPE (PE)', '18/410 Fine-Mist Sprey', 'En az 5.000 Adet', '250 Adet / Antistatik Poşetli', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MPC-014-50ML</span>
           <div class="header-right-badges">
@@ -1316,8 +1406,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MPC-014-50ML_gen.png" class="img-ai-mode" alt="MPC-014-50ML AI Stüdyo">
-          <img src="./katalog_assets/MPC-014-50ML_orig.jpg" class="img-orig-mode" alt="MPC-014-50ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MPC-014-50ML_gen.webp" class="img-ai-mode" alt="MPC-014-50ML AI Stüdyo">
+          <img src="./katalog_assets/MPC-014-50ML_orig.webp" class="img-orig-mode" alt="MPC-014-50ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Silindirik İnce Sis Sprey Şişesi</h3>
@@ -1330,7 +1420,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1215A-150ML', 'Konik Omuzlu Bakım Şişesi', '150 ml', './katalog_assets/MP-1215A-150ML_gen.png', './katalog_assets/MP-1215A-150ML_orig.jpg', 'Kristal Parlak PET', '24/410 Flip-Top / Pompa', 'En az 5.000 Adet', '160 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1215A-150ML', 'Konik Omuzlu Bakım Şişesi', '150 ml', './katalog_assets/MP-1215A-150ML_gen.webp', './katalog_assets/MP-1215A-150ML_orig.webp', 'Kristal Parlak PET', '24/410 Flip-Top / Pompa', 'En az 5.000 Adet', '160 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-1215A-150ML</span>
           <div class="header-right-badges">
@@ -1339,8 +1429,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-1215A-150ML_gen.png" class="img-ai-mode" alt="MP-1215A-150ML AI Stüdyo">
-          <img src="./katalog_assets/MP-1215A-150ML_orig.jpg" class="img-orig-mode" alt="MP-1215A-150ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-1215A-150ML_gen.webp" class="img-ai-mode" alt="MP-1215A-150ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1215A-150ML_orig.webp" class="img-orig-mode" alt="MP-1215A-150ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Konik Omuzlu Bakım Şişesi</h3>
@@ -1385,7 +1475,7 @@
     </header>
 
     <section class="equal-product-grid-2x2">
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-050-180ML', 'Dozaj Pompalı Losyon Şişesi', '180 ml', './katalog_assets/MP-050-180ML_gen.png', './katalog_assets/MP-050-180ML_orig.jpg', 'Opak Beyaz Gövde (PE Form)', '24/410 Kilitli Dozaj Pompası', 'En az 5.000 Adet', '120 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-050-180ML', 'Dozaj Pompalı Losyon Şişesi', '180 ml', './katalog_assets/MP-050-180ML_gen.webp', './katalog_assets/MP-050-180ML_orig.webp', 'Opak Beyaz Gövde (PE Form)', '24/410 Kilitli Dozaj Pompası', 'En az 5.000 Adet', '120 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-050-180ML</span>
           <div class="header-right-badges">
@@ -1394,8 +1484,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-050-180ML_gen.png" class="img-ai-mode" alt="MP-050-180ML AI Stüdyo">
-          <img src="./katalog_assets/MP-050-180ML_orig.jpg" class="img-orig-mode" alt="MP-050-180ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-050-180ML_gen.webp" class="img-ai-mode" alt="MP-050-180ML AI Stüdyo">
+          <img src="./katalog_assets/MP-050-180ML_orig.webp" class="img-orig-mode" alt="MP-050-180ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Dozaj Pompalı Losyon Şişesi</h3>
@@ -1408,7 +1498,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-26A-180ML', 'Geniş Ağızlı Şampuan Şişesi', '180 ml', './katalog_assets/MPK-26A-180ML_gen.png', './katalog_assets/MPK-26A-180ML_orig.jpg', 'Yarı-Saydam HDPE (FDA Onaylı PE)', '28/410 Disc-Top & Flip-Top', 'En az 5.000 Adet', '180 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-26A-180ML', 'Geniş Ağızlı Şampuan Şişesi', '180 ml', './katalog_assets/MPK-26A-180ML_gen.webp', './katalog_assets/MPK-26A-180ML_orig.webp', 'Yarı-Saydam HDPE (FDA Onaylı PE)', '28/410 Disc-Top & Flip-Top', 'En az 5.000 Adet', '180 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MPK-26A-180ML</span>
           <div class="header-right-badges">
@@ -1417,8 +1507,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MPK-26A-180ML_gen.png" class="img-ai-mode" alt="MPK-26A-180ML AI Stüdyo">
-          <img src="./katalog_assets/MPK-26A-180ML_orig.jpg" class="img-orig-mode" alt="MPK-26A-180ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MPK-26A-180ML_gen.webp" class="img-ai-mode" alt="MPK-26A-180ML AI Stüdyo">
+          <img src="./katalog_assets/MPK-26A-180ML_orig.webp" class="img-orig-mode" alt="MPK-26A-180ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Geniş Ağızlı Şampuan Şişesi</h3>
@@ -1431,7 +1521,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-063-200ML', 'Silindirik Vücut & Saç Bakım Şişesi', '200 ml', './katalog_assets/MP-063-200ML_gen.png', './katalog_assets/MP-063-200ML_orig.jpg', 'Opak Beyaz HDPE (PE)', '24/410 Vidalı & Pompa Başlık', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-063-200ML', 'Silindirik Vücut & Saç Bakım Şişesi', '200 ml', './katalog_assets/MP-063-200ML_gen.webp', './katalog_assets/MP-063-200ML_orig.webp', 'Opak Beyaz HDPE (PE)', '24/410 Vidalı & Pompa Başlık', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-063-200ML</span>
           <div class="header-right-badges">
@@ -1440,8 +1530,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-063-200ML_gen.png" class="img-ai-mode" alt="MP-063-200ML AI Stüdyo">
-          <img src="./katalog_assets/MP-063-200ML_orig.jpg" class="img-orig-mode" alt="MP-063-200ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-063-200ML_gen.webp" class="img-ai-mode" alt="MP-063-200ML AI Stüdyo">
+          <img src="./katalog_assets/MP-063-200ML_orig.webp" class="img-orig-mode" alt="MP-063-200ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Silindirik Vücut & Saç Bakım Şişesi</h3>
@@ -1454,7 +1544,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-003-150ML', 'Düz Tabanlı Kozmetik Tonik Şişesi', '150 ml', './katalog_assets/MPC-003-150ML_gen.png', './katalog_assets/MPC-003-150ML_orig.jpg', 'Yüksek Berraklıkta Kristal PET', '20/410 Alüminyum Vidalı Kapak', 'En az 5.000 Adet', '180 Adet / Koruyucu Koli', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPC-003-150ML', 'Düz Tabanlı Kozmetik Tonik Şişesi', '150 ml', './katalog_assets/MPC-003-150ML_gen.webp', './katalog_assets/MPC-003-150ML_orig.webp', 'Yüksek Berraklıkta Kristal PET', '20/410 Alüminyum Vidalı Kapak', 'En az 5.000 Adet', '180 Adet / Koruyucu Koli', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">MPC-003-150ML</span>
           <div class="header-right-badges">
@@ -1463,8 +1553,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MPC-003-150ML_gen.png" class="img-ai-mode" alt="MPC-003-150ML AI Stüdyo">
-          <img src="./katalog_assets/MPC-003-150ML_orig.jpg" class="img-orig-mode" alt="MPC-003-150ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MPC-003-150ML_gen.webp" class="img-ai-mode" alt="MPC-003-150ML AI Stüdyo">
+          <img src="./katalog_assets/MPC-003-150ML_orig.webp" class="img-orig-mode" alt="MPC-003-150ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Düz Tabanlı Kozmetik Tonik Şişesi</h3>
@@ -1509,7 +1599,7 @@
     </header>
 
     <section class="equal-product-grid-2x2">
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1226A-250ML', 'Silindirik Kuaför Bakım Şişesi', '250 ml', './katalog_assets/MP-1226A-250ML_gen.png', './katalog_assets/MP-1226A-250ML_orig.jpg', 'Ağır Hizmet Kristal PET', '24/410 Lüks Losyon Pompası', 'En az 5.000 Adet', '120 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-1226A-250ML', 'Silindirik Kuaför Bakım Şişesi', '250 ml', './katalog_assets/MP-1226A-250ML_gen.webp', './katalog_assets/MP-1226A-250ML_orig.webp', 'Ağır Hizmet Kristal PET', '24/410 Lüks Losyon Pompası', 'En az 5.000 Adet', '120 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-1226A-250ML</span>
           <div class="header-right-badges">
@@ -1518,8 +1608,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-1226A-250ML_gen.png" class="img-ai-mode" alt="MP-1226A-250ML AI Stüdyo">
-          <img src="./katalog_assets/MP-1226A-250ML_orig.jpg" class="img-orig-mode" alt="MP-1226A-250ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-1226A-250ML_gen.webp" class="img-ai-mode" alt="MP-1226A-250ML AI Stüdyo">
+          <img src="./katalog_assets/MP-1226A-250ML_orig.webp" class="img-orig-mode" alt="MP-1226A-250ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Silindirik Kuaför Bakım Şişesi</h3>
@@ -1532,7 +1622,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-2259-250ML', 'Oval Ergonomik Şampuan Şişesi', '250 ml', './katalog_assets/MP-2259-250ML_gen.png', './katalog_assets/MP-2259-250ML_orig.jpg', 'Opak Beyaz HDPE (PE)', '28/410 Çift Kademeli Flip-Top', 'En az 5.000 Adet', '108 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-2259-250ML', 'Oval Ergonomik Şampuan Şişesi', '250 ml', './katalog_assets/MP-2259-250ML_gen.webp', './katalog_assets/MP-2259-250ML_orig.webp', 'Opak Beyaz HDPE (PE)', '28/410 Çift Kademeli Flip-Top', 'En az 5.000 Adet', '108 Adet / Bölmeli Koli', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-2259-250ML</span>
           <div class="header-right-badges">
@@ -1541,8 +1631,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-2259-250ML_gen.png" class="img-ai-mode" alt="MP-2259-250ML AI Stüdyo">
-          <img src="./katalog_assets/MP-2259-250ML_orig.jpg" class="img-orig-mode" alt="MP-2259-250ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-2259-250ML_gen.webp" class="img-ai-mode" alt="MP-2259-250ML AI Stüdyo">
+          <img src="./katalog_assets/MP-2259-250ML_orig.webp" class="img-orig-mode" alt="MP-2259-250ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Oval Ergonomik Şampuan Şişesi</h3>
@@ -1555,7 +1645,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-31A-250ML', 'Köşeli Tasarım Losyon Şişesi', '250 ml', './katalog_assets/MPK-31A-250ML_gen.png', './katalog_assets/MPK-31A-250ML_orig.jpg', 'Opak Beyaz Polimer (PE Form)', '24/410 Dozaj Pompası', 'En az 5.000 Adet', '130 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MPK-31A-250ML', 'Köşeli Tasarım Losyon Şişesi', '250 ml', './katalog_assets/MPK-31A-250ML_gen.webp', './katalog_assets/MPK-31A-250ML_orig.webp', 'Opak Beyaz Polimer (PE Form)', '24/410 Dozaj Pompası', 'En az 5.000 Adet', '130 Adet / İhracat Kolisi', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MPK-31A-250ML</span>
           <div class="header-right-badges">
@@ -1564,8 +1654,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MPK-31A-250ML_gen.png" class="img-ai-mode" alt="MPK-31A-250ML AI Stüdyo">
-          <img src="./katalog_assets/MPK-31A-250ML_orig.jpg" class="img-orig-mode" alt="MPK-31A-250ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MPK-31A-250ML_gen.webp" class="img-ai-mode" alt="MPK-31A-250ML AI Stüdyo">
+          <img src="./katalog_assets/MPK-31A-250ML_orig.webp" class="img-orig-mode" alt="MPK-31A-250ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Köşeli Tasarım Losyon Şişesi</h3>
@@ -1578,7 +1668,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('MP-221-500ML', 'Geniş Hacimli Aile Boyu Şişe', '500 ml', './katalog_assets/MP-221-500ML_gen.png', './katalog_assets/MP-221-500ML_orig.jpg', 'Geri Dönüştürülmüş PCR / HDPE (PE)', '28/410 Pompa & Vidalı Seçenek', 'En az 5.000 Adet', '80 Adet / Ağır Hizmet Kolisi', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('MP-221-500ML', 'Geniş Hacimli Aile Boyu Şişe', '500 ml', './katalog_assets/MP-221-500ML_gen.webp', './katalog_assets/MP-221-500ML_orig.webp', 'Geri Dönüştürülmüş PCR / HDPE (PE)', '28/410 Pompa & Vidalı Seçenek', 'En az 5.000 Adet', '80 Adet / Ağır Hizmet Kolisi', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">MP-221-500ML</span>
           <div class="header-right-badges">
@@ -1587,8 +1677,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/MP-221-500ML_gen.png" class="img-ai-mode" alt="MP-221-500ML AI Stüdyo">
-          <img src="./katalog_assets/MP-221-500ML_orig.jpg" class="img-orig-mode" alt="MP-221-500ML Fiziksel Orijinal">
+          <img src="./katalog_assets/MP-221-500ML_gen.webp" class="img-ai-mode" alt="MP-221-500ML AI Stüdyo">
+          <img src="./katalog_assets/MP-221-500ML_orig.webp" class="img-orig-mode" alt="MP-221-500ML Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Geniş Hacimli Aile Boyu Şişe</h3>
@@ -1633,7 +1723,7 @@
     </header>
 
     <section class="equal-product-grid-2x2">
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4312', 'Elit Kozmetik Losyon & Jel Şişesi', '200 ml', './katalog_assets/GRY-4312_gen.png', './katalog_assets/GRY-4312_orig.jpg', 'Lüks Kalın Tabanlı Ağır PET', '24/410 Metalize Pompa Uyumlu', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4312', 'Elit Kozmetik Losyon & Jel Şişesi', '200 ml', './katalog_assets/GRY-4312_gen.webp', './katalog_assets/GRY-4312_orig.webp', 'Lüks Kalın Tabanlı Ağır PET', '24/410 Metalize Pompa Uyumlu', 'En az 5.000 Adet', '140 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4312</span>
           <div class="header-right-badges">
@@ -1642,8 +1732,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4312_gen.png" class="img-ai-mode" alt="GRY-4312 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4312_orig.jpg" class="img-orig-mode" alt="GRY-4312 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4312_gen.webp" class="img-ai-mode" alt="GRY-4312 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4312_orig.webp" class="img-orig-mode" alt="GRY-4312 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Elit Kozmetik Losyon & Jel Şişesi</h3>
@@ -1656,7 +1746,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4314', 'Dermokozmetik Damlalıklı Bakım Şişesi', '100 ml', './katalog_assets/GRY-4314_gen.png', './katalog_assets/GRY-4314_orig.jpg', 'Farmasötik Tip-I Ağır Cam', '20/410 Pipetli Cam Damlalık', 'En az 5.000 Adet', '160 Adet / Seperatörlü Koli', 'Optik Ağır Cam', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4314', 'Dermokozmetik Damlalıklı Bakım Şişesi', '100 ml', './katalog_assets/GRY-4314_gen.webp', './katalog_assets/GRY-4314_orig.webp', 'Farmasötik Tip-I Ağır Cam', '20/410 Pipetli Cam Damlalık', 'En az 5.000 Adet', '160 Adet / Seperatörlü Koli', 'Optik Ağır Cam', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4314</span>
           <div class="header-right-badges">
@@ -1665,8 +1755,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4314_gen.png" class="img-ai-mode" alt="GRY-4314 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4314_orig.jpg" class="img-orig-mode" alt="GRY-4314 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4314_gen.webp" class="img-ai-mode" alt="GRY-4314 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4314_orig.webp" class="img-orig-mode" alt="GRY-4314 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Dermokozmetik Damlalıklı Bakım Şişesi</h3>
@@ -1679,7 +1769,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4338', 'Silindirik Lüks Köpük & Şampuan Şişesi', '250 ml', './katalog_assets/GRY-4338_gen.png', './katalog_assets/GRY-4338_orig.jpg', 'Mat Gövde HDPE Polimer (PE)', '28/410 Köpük & Losyon Pompa', 'En az 5.000 Adet', '112 Adet / Güçlendirilmiş Koli', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4338', 'Silindirik Lüks Köpük & Şampuan Şişesi', '250 ml', './katalog_assets/GRY-4338_gen.webp', './katalog_assets/GRY-4338_orig.webp', 'Mat Gövde HDPE Polimer (PE)', '28/410 Köpük & Losyon Pompa', 'En az 5.000 Adet', '112 Adet / Güçlendirilmiş Koli', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4338</span>
           <div class="header-right-badges">
@@ -1688,8 +1778,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4338_gen.png" class="img-ai-mode" alt="GRY-4338 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4338_orig.jpg" class="img-orig-mode" alt="GRY-4338 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4338_gen.webp" class="img-ai-mode" alt="GRY-4338 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4338_orig.webp" class="img-orig-mode" alt="GRY-4338 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Silindirik Lüks Köpük & Şampuan Şişesi</h3>
@@ -1702,7 +1792,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4086', 'Geniş Tabanlı Profesyonel Bakım Şişesi', '300 ml', './katalog_assets/GRY-4086_gen.png', './katalog_assets/GRY-4086_orig.jpg', 'Yüksek Yoğunluklu PE (HDPE)', '28/410 Profesyonel Dozaj Pompa', 'En az 5.000 Adet', '96 Adet / Bölmeli Palet Kolisi', 'Soft Touch uyumludur', true)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4086', 'Geniş Tabanlı Profesyonel Bakım Şişesi', '300 ml', './katalog_assets/GRY-4086_gen.webp', './katalog_assets/GRY-4086_orig.webp', 'Yüksek Yoğunluklu PE (HDPE)', '28/410 Profesyonel Dozaj Pompa', 'En az 5.000 Adet', '96 Adet / Bölmeli Palet Kolisi', 'Soft Touch uyumludur', true)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4086</span>
           <div class="header-right-badges">
@@ -1711,8 +1801,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4086_gen.png" class="img-ai-mode" alt="GRY-4086 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4086_orig.jpg" class="img-orig-mode" alt="GRY-4086 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4086_gen.webp" class="img-ai-mode" alt="GRY-4086 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4086_orig.webp" class="img-orig-mode" alt="GRY-4086 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Geniş Tabanlı Profesyonel Bakım Şişesi</h3>
@@ -1757,7 +1847,7 @@
     </header>
 
     <section class="equal-product-grid-2x2">
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4275', 'Kare Formlu Lüks Parfüm & Tonik Şişesi', '100 ml', './katalog_assets/GRY-4275_gen.png', './katalog_assets/GRY-4275_orig.jpg', 'Optik Berraklıkta Kalın Cam', '18/415 Crimp & Vida Uyumlu', 'En az 5.000 Adet', '120 Adet / Özel Köpük Yataklı', 'Optik Ağır Cam', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4275', 'Kare Formlu Lüks Parfüm & Tonik Şişesi', '100 ml', './katalog_assets/GRY-4275_gen.webp', './katalog_assets/GRY-4275_orig.webp', 'Optik Berraklıkta Kalın Cam', '18/415 Crimp & Vida Uyumlu', 'En az 5.000 Adet', '120 Adet / Özel Köpük Yataklı', 'Optik Ağır Cam', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4275</span>
           <div class="header-right-badges">
@@ -1766,8 +1856,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4275_gen.png" class="img-ai-mode" alt="GRY-4275 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4275_orig.jpg" class="img-orig-mode" alt="GRY-4275 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4275_gen.webp" class="img-ai-mode" alt="GRY-4275 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4275_orig.webp" class="img-orig-mode" alt="GRY-4275 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Kare Formlu Lüks Parfüm & Tonik Şişesi</h3>
@@ -1780,7 +1870,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4316', 'Silindirik Mat Damlalıklı Şişe', '150 ml', './katalog_assets/GRY-4316_gen.png', './katalog_assets/GRY-4316_orig.jpg', 'Buzlu Cam Efektli Kristal PET', '20/410 Hassas Dozaj Damlalığı', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4316', 'Silindirik Mat Damlalıklı Şişe', '150 ml', './katalog_assets/GRY-4316_gen.webp', './katalog_assets/GRY-4316_orig.webp', 'Buzlu Cam Efektli Kristal PET', '20/410 Hassas Dozaj Damlalığı', 'En az 5.000 Adet', '150 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4316</span>
           <div class="header-right-badges">
@@ -1789,8 +1879,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4316_gen.png" class="img-ai-mode" alt="GRY-4316 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4316_orig.jpg" class="img-orig-mode" alt="GRY-4316 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4316_gen.webp" class="img-ai-mode" alt="GRY-4316 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4316_orig.webp" class="img-orig-mode" alt="GRY-4316 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Silindirik Mat Damlalıklı Şişe</h3>
@@ -1803,7 +1893,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4320', 'Konik Tabanlı Dermokozmetik Şişe', '200 ml', './katalog_assets/GRY-4320_gen.png', './katalog_assets/GRY-4320_orig.jpg', 'Yüksek Bariyerli Şeffaf PETG', '24/410 Kilitli Pompa Başlık', 'En az 5.000 Adet', '140 Adet / Bölmeli Koli', 'Kristal Parlak (PETG)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4320', 'Konik Tabanlı Dermokozmetik Şişe', '200 ml', './katalog_assets/GRY-4320_gen.webp', './katalog_assets/GRY-4320_orig.webp', 'Yüksek Bariyerli Şeffaf PETG', '24/410 Kilitli Pompa Başlık', 'En az 5.000 Adet', '140 Adet / Bölmeli Koli', 'Kristal Parlak (PETG)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4320</span>
           <div class="header-right-badges">
@@ -1812,8 +1902,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4320_gen.png" class="img-ai-mode" alt="GRY-4320 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4320_orig.jpg" class="img-orig-mode" alt="GRY-4320 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4320_gen.webp" class="img-ai-mode" alt="GRY-4320 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4320_orig.webp" class="img-orig-mode" alt="GRY-4320 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Konik Tabanlı Dermokozmetik Şişe</h3>
@@ -1826,7 +1916,7 @@
           <tr><td class="label-col">Minimum Sipariş (MOQ):</td><td class="value-col moq-accent">En az 5.000 Adet</td></tr>
         </table>
       </div>
-      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4324', 'Ağır Tabanlı Kozmetik Dispenser Şişesi', '250 ml', './katalog_assets/GRY-4324_gen.png', './katalog_assets/GRY-4324_orig.jpg', 'Kristal Polimer / Cam Ağırlığında', '24/410 Losyon & Jel Pompası', 'En az 5.000 Adet', '110 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
+      <div class="equal-product-card" onclick="openProductInspectionModal('GRY-4324', 'Ağır Tabanlı Kozmetik Dispenser Şişesi', '250 ml', './katalog_assets/GRY-4324_gen.webp', './katalog_assets/GRY-4324_orig.webp', 'Kristal Polimer / Cam Ağırlığında', '24/410 Losyon & Jel Pompası', 'En az 5.000 Adet', '110 Adet / İhracat Kolisi', 'Kristal Parlak (PET)', false)">
         <div class="card-top-header">
           <span class="product-code-tag">GRY-4324</span>
           <div class="header-right-badges">
@@ -1835,8 +1925,8 @@
           </div>
         </div>
         <div class="packshot-uniform-frame">
-          <img src="./katalog_assets/GRY-4324_gen.png" class="img-ai-mode" alt="GRY-4324 AI Stüdyo">
-          <img src="./katalog_assets/GRY-4324_orig.jpg" class="img-orig-mode" alt="GRY-4324 Fiziksel Orijinal">
+          <img src="./katalog_assets/GRY-4324_gen.webp" class="img-ai-mode" alt="GRY-4324 AI Stüdyo">
+          <img src="./katalog_assets/GRY-4324_orig.webp" class="img-orig-mode" alt="GRY-4324 Fiziksel Orijinal">
           <span class="inspect-cue-badge">🔍 İncele</span>
         </div>
         <h3 class="card-title-text">Ağır Tabanlı Kozmetik Dispenser Şişesi</h3>
@@ -1875,7 +1965,7 @@
       </div>
       <div class="page-header-meta-box">
         <div class="catalog-ref-no">Mertkopoli Plastik Ltd. Şti.</div>
-        <div>Revizyon: 2026-REV-6</div>
+        <div>Revizyon: 2026-REV-7</div>
         <div>25 Ekim 2026</div>
       </div>
     </header>
@@ -1991,7 +2081,7 @@
   </article>
 
   <!-- ==========================================================================
-       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL & ALTTA BİLGİLER)
+       YENİ DİKEY POP-UP MODAL (ORTALANMIŞ BÜYÜK GÖRSEL, ADET VE WHATSAPP SİPARİŞ)
        ========================================================================== -->
   <div class="tech-lightbox-overlay" id="inspectionOverlay" onclick="closeProductInspectionModal(event)">
     <div class="lightbox-modal-card" onclick="event.stopPropagation()">
@@ -2043,21 +2133,40 @@
           </div>
         </div>
 
+        <!-- Adet Seçici (Quantity Stepper) -->
+        <div class="modal-order-quantity-box">
+          <div class="qty-prompt-text">
+            <span class="qty-main-title">Talep / Sipariş Adedi:</span>
+            <span class="qty-moq-hint">Asgari fabrika üretim kotası: <strong>5.000 Adet</strong></span>
+          </div>
+          <div class="qty-stepper-control">
+            <button type="button" class="qty-step-btn" onclick="adjustOrderQuantity(-1000)" title="1.000 Adet Azalt">−</button>
+            <input type="number" id="orderQuantityInput" class="qty-input-field" value="5000" min="5000" step="500" onchange="validateOrderQuantity(this)">
+            <button type="button" class="qty-step-btn" onclick="adjustOrderQuantity(1000)" title="1.000 Adet Artır">+</button>
+            <span class="qty-unit-label">Adet</span>
+          </div>
+        </div>
+
+        <!-- Dinamik Adet Uyarı Bandı -->
+        <div id="quantityWarningBanner" class="quantity-warning-banner" style="display:none;">
+          ⚠️ Minimum sipariş adedi <strong>en az 5.000 Adet</strong> olmalıdır. Adet 5.000 olarak güncellendi.
+        </div>
+
         <p class="modal-description-lead" id="modalProductDesc">
           Mertkopoli Plastik Ürünler San. Tic. Ltd. Şti. tescilli stüdyo kalıbıdır. Otomatik dolum hatlarına, sızdırmazlık testlerine ve etiketleme makinelerine tam uyumludur.
         </p>
 
         <!-- Aksiyon Butonları -->
         <div class="modal-actions-row">
+          <button class="modal-whatsapp-btn" onclick="sendWhatsAppOrderRequest()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.954-1.399A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.614 0-3.11-.453-4.394-1.238l-.315-.191-2.923.826.836-2.846-.208-.329A7.957 7.957 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+            </svg>
+            Numune Talep Et (WhatsApp)
+          </button>
           <button class="modal-cartela-btn" onclick="openColorCartelaInfo()">
-            🎨 Renk Kartelasını İncele
+            🎨 Renk Kartelası
           </button>
-          <button class="modal-sample-btn" onclick="alert('Numune ve kartela talebiniz Mertkopoli Plastik satış ekibine iletildi.')">
-            Numune Talep Et
-          </button>
-          <a href="tel:+902122230501" class="modal-call-btn">
-            +90 212 223 0501
-          </a>
           <button class="modal-dismiss-btn" onclick="closeProductInspectionModal()">
             Kapat
           </button>
@@ -2092,6 +2201,11 @@
       document.getElementById('modalProductMoq').textContent = moq;
       document.getElementById('modalProductBox').textContent = box;
       
+      // Reset quantity input to minimum 5000
+      const qtyInput = document.getElementById('orderQuantityInput');
+      qtyInput.value = 5000;
+      document.getElementById('quantityWarningBanner').style.display = 'none';
+
       const badge = document.getElementById('modalSoftTouchBadge');
       const surfEl = document.getElementById('modalProductSurface');
       if (isPe) {
@@ -2110,6 +2224,50 @@
       document.getElementById('inspectionOverlay').classList.remove('active');
     }
 
+    // Adet Doğrulama ve Minimum 5000 Kontrolü
+    function validateOrderQuantity(input) {
+      let val = parseInt(input.value, 10);
+      const minMoq = 5000;
+      const banner = document.getElementById('quantityWarningBanner');
+
+      if (isNaN(val) || val < minMoq) {
+        input.value = minMoq;
+        if (banner) {
+          banner.style.display = 'flex';
+          banner.innerHTML = '⚠️ Minimum sipariş adedi <strong>en az 5.000 Adet</strong> olmalıdır. Adet 5.000 olarak güncellendi.';
+          setTimeout(() => { banner.style.display = 'none'; }, 4500);
+        }
+        return minMoq;
+      } else {
+        if (banner) banner.style.display = 'none';
+        return val;
+      }
+    }
+
+    function adjustOrderQuantity(delta) {
+      const input = document.getElementById('orderQuantityInput');
+      let val = parseInt(input.value, 10) || 5000;
+      val += delta;
+      input.value = val;
+      validateOrderQuantity(input);
+    }
+
+    // WhatsApp Mesajı Oluşturma ve Gönderme
+    function sendWhatsAppOrderRequest() {
+      const input = document.getElementById('orderQuantityInput');
+      const qty = validateOrderQuantity(input);
+      const productTitle = document.getElementById('modalProductTitle').textContent.trim();
+      const productCode = document.getElementById('modalProductCode').textContent.trim();
+      
+      // Kullanıcı talebine tam uyumlu metin:
+      // merhaba, e kataloğunuzdan ulaşıyorum. "başlıktaki ürün ismi" için "xxxx" adet siparişi hakkında bilgi almak istiyorum.
+      const formattedQty = Number(qty).toLocaleString('tr-TR');
+      const message = `Merhaba, e kataloğunuzdan ulaşıyorum. "${productTitle}" (${productCode}) için "${formattedQty}" adet siparişi hakkında bilgi almak istiyorum.`;
+      
+      const whatsappUrl = `https://wa.me/905383782705?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
     function openColorCartelaInfo() {
       alert("MERTKOPOLİ PLASTİK — RENK KARTELASI VE YÜZEY BİLGİLENDİRMESİ\n\n" +
             "• Renk Seçenekleri: Standart şeffaf, saf beyaz ve medikal amber dışında; kurumsal talebinize özel tüm Pantone kodlarında masterbatch gövde renklendirme yapılmaktadır.\n" +
@@ -2117,7 +2275,7 @@
             "• Soft Touch Uyumu: Tüm PE (HDPE, LDPE, PCR) şişelerimiz kadife dokunuşlu Soft Touch yüzey kaplamasına tam uyumludur (PET şişelerde Soft Touch kaplama yapılmamaktadır).\n" +
             "• Minimum Sipariş (MOQ): En az 5.000 Adet.\n\n" +
             "Fiziksel renk kartelası ve özel numune talepleriniz için:\n" +
-            "Tel: +90 212 223 0501 | E-Posta: mertko@mertko.com | www.mertko.com");
+            "WhatsApp & Tel: 0538 378 27 05 | Sabit: +90 212 223 0501 | E-Posta: mertko@mertko.com");
     }
 
     document.addEventListener('keydown', (e) => {
